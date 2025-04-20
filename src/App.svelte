@@ -14,6 +14,9 @@
   function removeCity(index: number) {
     timezones = timezones.toSpliced(index, 1);
   }
+
+  let darkMode = false;
+  $: document.body.classList.toggle('dark', darkMode);
 </script>
 
 <style  lang="scss">
@@ -38,6 +41,7 @@
     justify-content: center;
     margin-top: 1rem;
   }
+  
   .city-clock-wrapper {
     position: relative;
     margin: 1rem 2rem 1rem 2rem;
@@ -86,13 +90,56 @@
   }
 
   .search {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2rem;
   }
+
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+
+    input {
+      appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      background: var(--bg);
+      border: 2px solid var(--text);
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+
+      &:checked {
+        background: var(--text);
+      }
+    }
+
+    label {
+      font-size: 1.2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
 </style>
+
+<div class="theme-toggle">
+  <input type="checkbox" bind:checked={darkMode} id="themeSwitch" />
+  <label for="themeSwitch">{darkMode ? '🌙' : '☀️'}</label>
+</div>
 
 <main>
   <div class="clock-grid">

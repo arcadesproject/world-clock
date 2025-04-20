@@ -35,7 +35,7 @@
 
 <style lang="scss">
 .city-clock {
-  background: #fff;
+  background: var(--card-bg, #fff);
   padding: 1rem;
   margin: 0.5rem;
   border: 1px solid rgb(117, 117, 117);
@@ -47,13 +47,13 @@
   h3 {
     font-size: 1rem;
     margin-bottom: 0.25rem;
-    color: #444;
+    color: var(--text)
   }
 
   .time {
     font-size: 1.75rem;
     font-weight: bold;
-    color: #222;
+    color: var(--text);
   }
 }
 </style>

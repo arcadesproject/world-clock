@@ -68,7 +68,7 @@
       transform: translateX(-50%);
       list-style: none;
       padding: 0.5rem;
-      background: white;
+      background: var(--card-bg, #2c2c2c);
       border-radius: 0.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       max-height: 200px;
@@ -81,7 +81,7 @@
       padding: 0.5rem;
       cursor: pointer;
       &:hover {
-        background: #f0f0f0;
+        background: var(--search-hover, #444);
       }
       text-align: center;
     }
@@ -92,10 +92,6 @@
         width: 100%;
         padding: 0.5rem;
         text-align: left;
-
-        &:hover {
-            background: #f0f0f0;
-        }
     }
 
   }

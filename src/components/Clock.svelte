@@ -64,7 +64,7 @@
       font-weight: 600;
       letter-spacing: 0.05em;
       margin-top: 0.5rem;
-      color: #111;
+      color: var(--clock-color, #333);
       line-height: 1.1;
     }
 
