@@ -17,6 +17,8 @@ A sleek, responsive web app built with **Svelte** that shows your **local time**
 
 ![World Clock Screenshot](./screenshot.png)
 
+[Check it out here](https://arcadesproject.github.io/world-clock/)
+
 ---
 
 ## 🚀 Getting Started
