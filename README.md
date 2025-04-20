@@ -50,6 +50,7 @@ npm run build
 
 ## 📁 Project Structure
 
+```explorer
 src/
 ├── components/
 │   ├── Clock.svelte        # Local clock
@@ -60,6 +61,7 @@ src/
 │   └── utcOffset.ts        # Timezone offset helper
 ├── App.svelte              # Main app layout
 └── main.ts                 # App entry point
+```
 
 ---
 
